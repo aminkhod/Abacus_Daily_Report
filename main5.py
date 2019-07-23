@@ -10,7 +10,7 @@ mysql = MySQL()
 # MySQL configurations
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = ''
-app.config['MYSQL_DATABASE_DB'] = 'BucketList'
+app.config['MYSQL_DATABASE_DB'] = 'Abacus_Report'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
 
@@ -35,7 +35,7 @@ def showSignUp():
 
 @app.route('/signUp',methods=['POST'])
 def signUp():
-	read the posted values from the UI
+#	read the posted values from the UI
 	_name = request.form['inputName']
 	_email = request.form['inputEmail']
 	_password = request.form['inputPassword']
