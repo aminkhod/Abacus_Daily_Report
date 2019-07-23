@@ -1,11 +1,14 @@
 #Connect MySQL
 mysql -u root -p
 
-#CREATE DATABASE
+#CREATE DATABASE OR USE database_name
 CREATE DATABASE Abacus_Report;
+#OR
+USE Abacus_Report
+
 
 #CREATE TABLE
-CREATE TABLE `Abacus_Report`.`Emplyee` (
+CREATE TABLE `Abacus_Report`.`Employee` (
   `user_id` BIGINT NULL AUTO_INCREMENT,
   `user_name` VARCHAR(45) NULL,
   `user_username` VARCHAR(45) NULL,
@@ -20,13 +23,13 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_createUser`(
     IN p_password VARCHAR(20)
 )
 BEGIN
-    if ( select exists (select 1 from tbl_user where user_username = p_username) ) THEN
+    if ( select exists (select 1 from Employee where user_username = p_username) ) THEN
      
         select 'Username Exists !!';
      
     ELSE
      
-        insert into tbl_user
+        insert into Emplyee7
         (
             user_name,
             user_username,
@@ -43,3 +46,5 @@ BEGIN
 END$$
 DELIMITER ;
 
+#Drop procedure
+DROP procedure IF EXISTS  sp_creatUser;
