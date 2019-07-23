@@ -28,7 +28,7 @@ class Database:
                                    DictCursor)
         self.cur = self.con.cursor()
     def employee(self):
-        self.cur.execute("SELECT name, email FROM employee LIMIT 50")
+        self.cur.execute("SELECT user_name, user_username FROM employee LIMIT 50")
         result = self.cur.fetchall()
         return result
 

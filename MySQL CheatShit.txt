@@ -29,7 +29,7 @@ BEGIN
      
     ELSE
      
-        insert into Emplyee7
+        insert into Employee
         (
             user_name,
             user_username,
