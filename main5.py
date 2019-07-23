@@ -27,7 +27,7 @@ class Database:
         self.con = pymysql.connect(host=host, user=user, password=password, db=db, cursorclass=pymysql.cursors.
                                    DictCursor)
         self.cur = self.con.cursor()
-    def list_employees(self):
+    def employees(self):
         self.cur.execute("SELECT name, email FROM employees LIMIT 50")
         result = self.cur.fetchall()
         return result
@@ -35,18 +35,19 @@ class Database:
 @app.route("/")
 def template():
     return render_template("template.html")
-# @app.route('/home')
-# def home():
-#     return render_template("home.html")
-
 @app.route('/home')
+def home():
+    return render_template("home.html")
+
+@app.route('/employees')
 def employees():
     def db_query():
         db = Database()
-        emps = db.list_employees()
+        emps = db.employees()
         return emps
     res = db_query()
-    return render_template('employees.html', result=res, content_type='application/json')
+    print(res)
+    return render_template('employees.html', result=res)
 
 @app.route("/about")
 def about():
