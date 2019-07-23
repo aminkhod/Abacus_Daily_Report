@@ -1,0 +1,30 @@
+<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+    {% if result %}
+    
+    {% for row in result %}
+    
+    {% endfor %}
+    {% endif %}
+<table id="employees" style="width:100%"><tbody><tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr><tr>
+        <td> {{ row.name }}</td>
+        <td> {{ row.email }}</td>
+    </tr></tbody></table>

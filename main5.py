@@ -2,6 +2,7 @@
 from flask import Flask, render_template, json, request
 from flaskext.mysql import MySQL
 from werkzeug import generate_password_hash, check_password_hash
+import pymysql
 
 app = Flask(__name__)
 
@@ -27,16 +28,25 @@ class Database:
                                    DictCursor)
         self.cur = self.con.cursor()
     def list_employees(self):
-        self.cur.execute("SELECT first_name, last_name, gender FROM employees LIMIT 50")
+        self.cur.execute("SELECT name, email FROM employees LIMIT 50")
         result = self.cur.fetchall()
         return result
 
 @app.route("/")
 def template():
     return render_template("template.html")
+# @app.route('/home')
+# def home():
+#     return render_template("home.html")
+
 @app.route('/home')
-def home():
-    return render_template("home.html")
+def employees():
+    def db_query():
+        db = Database()
+        emps = db.list_employees()
+        return emps
+    res = db_query()
+    return render_template('employees.html', result=res, content_type='application/json')
 
 @app.route("/about")
 def about():
