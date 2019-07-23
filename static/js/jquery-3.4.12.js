@@ -10594,12 +10594,11 @@ if ( !noGlobal ) {
 
 
 $(function() {
-    $('#btnGoodsSale').click(function() {
+    $('#btnSignUp').click(function() {
  
         $.ajax({
-            url: '/GoodsSale',
-            //data: $('form').serialize(),
-			data: {},
+            url: '/signUp',
+            data: $('form').serialize(),
             type: 'POST',
             success: function(response) {
                 console.log(response);

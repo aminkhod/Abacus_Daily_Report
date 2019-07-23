@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6e224e6-d6bf-4e62-88ed-19cc7de721d1" name="Default Changelist" comment="" />
+    <list default="true" id="e6e224e6-d6bf-4e62-88ed-19cc7de721d1" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/main5.py" beforeDir="false" afterPath="$PROJECT_DIR$/main5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/js/jquery-3.4.12.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/jquery-3.4.12.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signup.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -10,10 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main7.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="214" selection-start-line="214" selection-end-line="214" />
+              <folding>
+                <element signature="e#1#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main5.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="85">
+              <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
               <folding>
                 <element signature="e#1#56#0" expanded="true" />
               </folding>
@@ -43,6 +60,7 @@
       <list>
         <option value="$PROJECT_DIR$/main6.py" />
         <option value="$PROJECT_DIR$/main7.py" />
+        <option value="$PROJECT_DIR$/main5.py" />
       </list>
     </option>
   </component>
@@ -81,6 +99,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Amin\Abacus_Work_Report" />
       <recent name="D:\Amin\Arghoob_Sales_report\Webpage1" />
     </key>
   </component>
@@ -182,6 +201,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1038" height="803" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17964073" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -219,8 +239,8 @@
     <entry file="file://$PROJECT_DIR$/main6.py" />
     <entry file="file://$PROJECT_DIR$/main7.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="322" column="16" lean-forward="true" selection-start-line="322" selection-start-column="16" selection-end-line="322" selection-end-column="16" />
+        <state relative-caret-position="130">
+          <caret line="214" selection-start-line="214" selection-end-line="214" />
           <folding>
             <element signature="e#1#56#0" expanded="true" />
           </folding>
@@ -229,7 +249,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
+        <state relative-caret-position="85">
+          <caret line="44" column="17" lean-forward="true" selection-start-line="44" selection-start-column="17" selection-end-line="44" selection-end-column="17" />
           <folding>
             <element signature="e#1#56#0" expanded="true" />
           </folding>
