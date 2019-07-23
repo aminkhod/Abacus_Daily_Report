@@ -1,6 +1,7 @@
 
 from flask import Flask, render_template, json, request
-from flaskext.mysql import MySQL
+from flaskext.mysql import MySQL as MySQL
+from flask_mysqldb import MySQL as MySQL1
 from werkzeug import generate_password_hash, check_password_hash
 import pymysql
 
@@ -14,9 +15,10 @@ app.config['MYSQL_DATABASE_PASSWORD'] = ''
 app.config['MYSQL_DATABASE_DB'] = 'Abacus_Report'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql.init_app(app)
-
 conn = mysql.connect()
 cursor = conn.cursor()
+
+mysql1 = MySQL1(app)
 
 class Database:
     def __init__(self):
@@ -38,9 +40,9 @@ def index():
         details = request.form
         firstName = details['fname']
         lastName = details['lname']
-        cur = mysql.connection.cursor()
+        cur = mysql1.connection.cursor()
         cur.execute("INSERT INTO MyUsers(firstName, lastName) VALUES (%s, %s)", (firstName, lastName))
-        mysql.connection.commit()
+        mysql1.connection.commit()
         cur.close()
         return 'success'
     return render_template('index.html')
